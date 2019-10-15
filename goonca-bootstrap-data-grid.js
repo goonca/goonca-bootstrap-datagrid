@@ -51,7 +51,7 @@ $goonca.dataGrid = function(props) {
     //remove the arrow down from all columns and rotate in case the columns to sort is already sorted
     _headerColumns.removeClass(`${ARROW_DOWN_CLASSNAME} ${this.sortedIndex != colPosition ? ARROW_UP_CLASSNAME : ''}`);
 
-    //show the arrow in the right column return its data-type
+    //show the arrow in the right column and return its data-type
     const colType = $(_headerColumns.get(colPosition))
       .addClass(ARROW_DOWN_CLASSNAME)
       .toggleClass(this.sortedIndex == colPosition ? ARROW_UP_CLASSNAME : '')
@@ -61,11 +61,7 @@ $goonca.dataGrid = function(props) {
     //** the result of the selector can't be stored once the table content is changeble
     $.fn.reverse = [].reverse;
     const sorted = $(`${TABLE_SELECTOR} tr`, this.wrapper)[this.sortedIndex == colPosition ? 'reverse' : 'sort']
-      ((cur, next) => {
-        console.log(getCellValue(cur));
-        return sortBy.get(colType)(getCellValue(cur), getCellValue(next))
-      });
-      //((cur, next) => (sortBy.get(colType)(getCellValue(cur), getCellValue(next))));
+      ((cur, next) => (sortBy.get(colType)(getCellValue(cur), getCellValue(next))));
 
     $(TABLE_SELECTOR, this.wrapper).empty().append(sorted);
 
