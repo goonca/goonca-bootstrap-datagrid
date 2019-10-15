@@ -1,0 +1,19 @@
+{
+  "name": "goonca-bootstrap-datagrid",
+  "version": "1.0.0",
+  "description": "Datagrid your bootstrap table",
+  "main": "goonca-bootstrap-data-grid.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goonca/goonca-bootstrap-datagrid.git"
+  },
+  "author": "@goonca",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/goonca/goonca-bootstrap-datagrid/issues"
+  },
+  "homepage": "https://github.com/goonca/goonca-bootstrap-datagrid#readme"
+}
